@@ -36,7 +36,7 @@ declare module "nunjucks" {
         noCache?: boolean;
         web?: {useCache?: boolean, async?: boolean};
         express?: express.Express;
-        tags: SyntaxSettings;
+        tags?: SyntaxSettings;
     }
 
     export function configure(path?: string, opt?: ConfigOptions): Environment;
