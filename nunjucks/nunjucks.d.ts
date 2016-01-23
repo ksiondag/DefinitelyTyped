@@ -15,6 +15,9 @@
 declare module "nunjucks" {
     import * as express from "express";
 
+    interface Environment {
+    }
+
     export interface SyntaxSettings {
         blockStart?: string;
         blockEnd?: string;
@@ -36,6 +39,6 @@ declare module "nunjucks" {
         tags: SyntaxSettings;
     }
 
-    export function configure(path?: string, options?: ConfigOptions);
+    export function configure(path?: string, opt?: ConfigOptions): Environment;
 }
 
